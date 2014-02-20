@@ -191,7 +191,7 @@ q quits
 ----------
 
 cat show the whole content of file
-more does the same thing as less
+more does the same thing as less but shows more of the content
 tail show the last content of the file
 head show the top content of the file
 less show less content of the file

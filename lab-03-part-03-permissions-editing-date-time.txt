@@ -18,22 +18,29 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 What command did you use, and what was its output?
 ----------
 
-
+Wed Feb 19 20:06:26 EST 2014
 
 ==========
 2. Print out a calendar for this month.
 
 What command did you use, and what was its output?
 ----------
-
-
+cal feb 2014
+  February 2014
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28
 
 ==========
 3. Go to your home directory.  Verify that you're in your home directory.
 
 What commands did you use to do this?
 ----------
-
+cd ~
+pwd
 
 
 ==========
@@ -41,25 +48,24 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
-
+touch copy_to_backup.sh
+ls
 
 ==========
 5. What are the permissions on your copy_to_backup.sh.
 
 What command did you use to find the permissions?
 ----------
+ls -l
 
-
-
+-rw-r--r--   1 student  staff       0 Feb 19 20:10 copy_to_backup.sh
 ==========
 6. Change the permissions so that this file is executable by the user.  Verify the new permissions.
 
 What commands did you use to do this?  What was the output?
 ----------
-
-
-
+chmod u+x copy_to_backup.sh 
+-rwxr--r--   1 student  staff       0 Feb 19 20:10 copy_to_backup.sh
 ==========
 7. Try executing the file!
 
@@ -67,8 +73,8 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
-
-
+/copy_to_backup.sh
+nothing happen
 
 ==========
 8. Open the file with nano
@@ -76,7 +82,7 @@ What command did you use to try to execute the file?  What happens?
 What command did you use to do this?
 ----------
 
-
+nano copy_to_backup.sh
 
 ==========
 9. In your file, write the following commands:
@@ -88,6 +94,10 @@ c. print out "I'm done backing up"
 Write out the code in your file below...
 ----------
 
+mkdir backup
+cp *.txt
+echo "I 'm done backing up"
+
 
 
 ==========
@@ -98,6 +108,7 @@ Write out the code in your file below...
 
 What commands did you use to do this?
 ----------
+touch 1.txt 2.txt
 
 
 
@@ -106,7 +117,7 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
+ mv copy_to_backup.sh 
 
 
 ==========
@@ -114,11 +125,13 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
-
-
+ls -l
+-rwxr--r--  1 student  staff  57 Feb 19 20:37 copy_to_backup.sh
 ==========
 14. Verify that a backup folder was created in your home directory... with copies of the files present.
 
 What commands did you use to do this?  Show the output.
 ----------
+ls
+ls backup
+1.txt	2.txt
